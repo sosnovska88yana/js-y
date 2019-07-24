@@ -17811,8 +17811,6 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   });
 });
 },{"jquery":"../node_modules/jquery/dist/jquery.js","popper.js":"../node_modules/popper.js/dist/esm/popper.js"}],"js/app.js":[function(require,module,exports) {
-"use strict";
-
 (function () {
   document.querySelector('#dismiss, .overlay').addEventListener('click', function () {
     document.getElementById('sidebar').classList.remove('active');
@@ -17821,51 +17819,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   document.getElementById('sidebarCollapse').addEventListener('click', function () {
     document.getElementById('sidebar').classList.add('active');
     document.querySelector('.overlay').classList.add('active');
-  });
-  var content = document.getElementById("cartItem").content;
-  document.querySelector('.cart-items').addEventListener('click', function (e) {
-    if (e.target && e.target.matches(".remove-item")) {
-      e.target.parentNode.parentNode.remove();
-    }
-
-    if (e.target && e.target.matches(".plus")) {
-      var el = e.target;
-      var price = parseFloat(el.parentNode.nextElementSibling.querySelector('.item-price').getAttribute('price'));
-      var val = parseInt(el.previousElementSibling.innerText);
-      val = el.previousElementSibling.innerText = val + 1;
-      el.parentNode.nextElementSibling.querySelector('.item-price').innerText = parseFloat(price * val).toFixed(2);
-    }
-
-    if (e.target && e.target.matches(".minus")) {
-      var _el = e.target;
-
-      var _price = parseFloat(_el.parentNode.nextElementSibling.querySelector('.item-price').getAttribute('price'));
-
-      var _val = parseInt(_el.nextElementSibling.innerText);
-
-      if (_val > 1) {
-        _val = _el.nextElementSibling.innerText = _val - 1;
-      }
-
-      _el.parentNode.nextElementSibling.querySelector('.item-price').innerText = parseFloat(_price * _val).toFixed(2);
-    }
-  }, false);
-  var addToCarts = document.querySelectorAll('.add-to-cart');
-
-  function addProductToCart(content, item) {
-    content.querySelector('.item-title').textContent = item.querySelector(".product-name").textContent;
-    content.querySelector('.item-price').textContent = item.querySelector(".product-price").textContent;
-    content.querySelector('.item-price').setAttribute('price', item.querySelector(".product-price").textContent);
-    content.querySelector('.item-img').style.backgroundImage = "url(" + item.querySelector("img").getAttribute('src') + ")";
-    ;
-    return content;
-  }
-
-  addToCarts.forEach(function (addToCart) {
-    addToCart.addEventListener('click', function () {
-      this.closest(".card").firstElementChild.style.transform = 'rotateY(180deg)';
-      document.querySelector('.cart-items').append(document.importNode(addProductToCart(content, this.closest(".card")), true));
-    });
+    document.querySelector('.collapse.in').classList.toggle('in');
+    document.querySelector('a[aria-expanded=true]').setAttribute('aria-expanded', 'false');
   });
 })();
 },{}],"js/jqapp.js":[function(require,module,exports) {
@@ -17963,7 +17918,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51883" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52440" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
