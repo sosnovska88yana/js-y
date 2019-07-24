@@ -1,0 +1,27 @@
+{
+  "name": "js-y",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sosnovska88yana/js-y.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sosnovska88yana/js-y/issues"
+  },
+  "homepage": "https://github.com/sosnovska88yana/js-y#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.12.3"
+  },
+  "devDependencies": {
+    "sass": "^1.22.7"
+  }
+}
