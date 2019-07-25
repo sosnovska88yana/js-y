@@ -17812,15 +17812,15 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 });
 },{"jquery":"../node_modules/jquery/dist/jquery.js","popper.js":"../node_modules/popper.js/dist/esm/popper.js"}],"js/app.js":[function(require,module,exports) {
 (function () {
-  document.querySelector('#dismiss, .overlay').addEventListener('click', function () {
-    document.getElementById('sidebar').classList.remove('active');
-    document.querySelector('.overlay').classList.remove('active');
+  document.querySelector("#dismiss, .overlay").addEventListener("click", function () {
+    document.getElementById("sidebar").classList.remove("active");
+    document.querySelector(".overlay").classList.remove("active");
   });
-  document.getElementById('sidebarCollapse').addEventListener('click', function () {
-    document.getElementById('sidebar').classList.add('active');
-    document.querySelector('.overlay').classList.add('active');
-    document.querySelector('.collapse.in').classList.toggle('in');
-    document.querySelector('a[aria-expanded=true]').setAttribute('aria-expanded', 'false');
+  document.getElementById("sidebarCollapse").addEventListener("click", function () {
+    document.getElementById("sidebar").classList.add("active");
+    document.querySelector(".overlay").classList.add("active");
+    document.querySelector(".collapse.in").classList.toggle("in");
+    document.querySelector("a[aria-expanded=true]").setAttribute("aria-expanded", "false");
   });
 })();
 },{}],"js/jqapp.js":[function(require,module,exports) {
@@ -17918,7 +17918,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52440" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53212" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
